@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Isildur</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<input id="input1" type="text">
+	<input id="input2" type="text">
+	<input id="input3" type="button">
+	<script>
+		window.addEventListener('load', () => {
+
+			let nouveauBouton = document.createElement("input"); 
+			nouveauBouton.setAttribute("type", "button")
+			nouveauBouton.setAttribute("value", "coucou")
+			nouveauBouton.setAttribute("onclick", "deleteButton(this)") // <input onclick="deleteButton(this)">
+			document.body.appendChild(nouveauBouton)
+			nouveauBouton.onclick = function() {
+				this.remove()
+			}
+			document.getElementById('input1').onclick = () => {
+				// ici, this réfère à window. Une arrow functione ne redéfinie pas le scope
+				console.log(this)
+			}
+
+			document.getElementById('input2').onclick = function () {
+				// ici, this réfère à l'objet qui va l'appeler
+				console.log(this)
+			}
+
+			document.getElementById('input3').onclick = function() {
+				this.remove()
+			}
+		})
+	</script>
+</body>
+
+</html>

@@ -8,8 +8,13 @@
 	<body>
 		<script>
 			const ajouter = () => {
-				let texte = prompt("Ajouter un stéréotype");
-				let nouvelElement = document.createElement("li");
+				let texte = prompt("Ajouter un stéréotype")
+				let nouvelElement = document.createElement("li")
+				let texteNode = document.createTextNode(texte) // ==> texte
+				nouvelElement.appendChild(texteNode)
+
+				let maListe =  document.getElementById('liste')
+				maListe.insertBefore(nouvelElement, maListe.firstChild)
 
 				
 			}

@@ -9,6 +9,8 @@
 		<script>
 			const ajouter = () => {
 				let texte = prompt("Ajouter un stéréotype");
+				let maListe = document.getElementById('liste')
+				maListe.innerHTML += `<li style="color:green">${texte}</li>`
 			}
 		</script>
 		

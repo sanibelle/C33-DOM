@@ -8,15 +8,18 @@
 	<body>
 		<script>
 			const supprimer = () => {
-
+				const item = document.getElementById('item1')
+				const maListe = document.getElementById('liste')
+				maListe.removeChild(item)
 			}
 			
 			const supprimerSansParent = node => {
-
+				node.remove()
 			}
 
 			const supprimerNoeud = node => {
-
+				const maListe = document.getElementById('liste')
+				maListe.removeChild(node)
 			}
 		</script>
 		

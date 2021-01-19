@@ -8,10 +8,10 @@
 	<body>
 		<script>
 			const ajouter = () => {
-				let texte = prompt("Ajouter un stéréotype");
+				let texte = prompt("Ajouter un stéréotype")
 				
-				let maListe = document.getElementById('liste');
-
+				let maListe = document.getElementById('liste')
+				maListe.innerHTML = `<li>${texte}</li>${maListe.innerHTML}`
 			}
 		</script>
 		
