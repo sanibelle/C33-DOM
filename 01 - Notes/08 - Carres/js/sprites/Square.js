@@ -23,7 +23,7 @@ class Square {
     }
 
     // voir notes 01
-    animateRect = () => {
+    animateRect () {
         this.element.style.top = `${this.y}px`
         this.element.style.left = `${this.x}px`
         this.element.style.opacity = this.opacity
