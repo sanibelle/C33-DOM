@@ -16,7 +16,6 @@ class Square {
 
         this.element = document.createElement('div')
         this.element.setAttribute('class', 'square')
-        this.element.setAttribute('class', 'fruit_1 fruit')
         document.body.appendChild(this.element)
 
         this.animateRect()
